@@ -1,0 +1,20 @@
+/* Only the existing bottom navigation receives the liquid skin. */
+.chapter-dock.liquid-dock{background:transparent;border-color:transparent;border-radius:0;backdrop-filter:none;box-shadow:none;overflow:visible;bottom:max(18px,calc(env(safe-area-inset-bottom) + 10px));isolation:isolate}
+.chapter-dock.liquid-dock>.dock-position{display:none}
+.liquid-dock .liquid-dock-glass,.liquid-dock .liquid-dock-shape{position:absolute;inset:-6px;width:calc(100% + 12px);height:calc(100% + 12px);pointer-events:none;z-index:-1}
+.liquid-dock .liquid-dock-glass{background:#070b10e8;backdrop-filter:blur(16px);transition:clip-path .46s cubic-bezier(.22,1,.36,1)}
+.liquid-dock .liquid-dock-shape{overflow:visible;filter:drop-shadow(0 10px 18px #0007)}
+.liquid-dock .liquid-dock-shape path{fill:none;vector-effect:non-scaling-stroke;transition:d .46s cubic-bezier(.22,1,.36,1)}
+.liquid-dock .liquid-edge{stroke:#ff8a00;stroke-opacity:.27;stroke-width:.8}
+.liquid-dock .liquid-edge-light{stroke:url(#liquid-dock-edge);stroke-width:1;stroke-opacity:.65}
+.liquid-dock .liquid-edge-halo{stroke:url(#liquid-dock-edge);stroke-width:5;stroke-opacity:.065}
+.liquid-dock .liquid-active-spot{position:absolute;left:0;top:0;width:35px;height:35px;border-radius:50%;border:1px solid #ff8a003b;background:radial-gradient(circle,#ff8a000d,transparent 76%);box-shadow:0 0 11px #ff8a0012;pointer-events:none;z-index:0;transition:transform .46s cubic-bezier(.22,1,.36,1);visibility:hidden}
+.chapter-dock.liquid-dock>a{background:transparent;border:0}
+.chapter-dock.liquid-dock>a>span{display:block;transition:transform .4s cubic-bezier(.22,1,.36,1),color .3s,filter .3s}
+.chapter-dock.liquid-dock>a[aria-current=location]>span{color:var(--blue);transform:scale(1.06);filter:drop-shadow(0 0 4px #ff8a0040)}
+.chapter-dock.liquid-dock>a:hover{translate:none;background:transparent}
+.chapter-dock.liquid-dock>a:hover>span,.chapter-dock.liquid-dock>a:focus-visible>span{transform:translateY(-3px) scale(1.12);color:var(--blue);filter:drop-shadow(0 0 5px #ff8a004d)}
+.chapter-dock.liquid-dock>a:focus-visible{outline:1px solid #ff8a0080;outline-offset:0;border-radius:50%}
+@media(max-width:700px){.chapter-dock.liquid-dock>a{width:40px!important;min-width:40px;flex:0 0 40px;height:42px!important}.chapter-dock.liquid-dock{gap:2px}}
+@media(max-width:380px){.chapter-dock.liquid-dock>a{width:36px!important;min-width:36px;flex:0 0 36px}}
+@media(prefers-reduced-motion:reduce){.liquid-dock .liquid-dock-glass,.liquid-dock .liquid-dock-shape path,.liquid-dock .liquid-active-spot,.chapter-dock.liquid-dock>a>span{transition:none}.chapter-dock.liquid-dock>a:hover>span,.chapter-dock.liquid-dock>a:focus-visible>span{transform:none}}

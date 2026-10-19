@@ -1,0 +1,11 @@
+/* Tiny magnetic dot only: no ring, labels, ripple or particles. */
+html[data-premium-cursor] .cursor-follower{display:none!important}
+.premium-cursor-layer{position:fixed;inset:0;z-index:2147483000;pointer-events:none!important;opacity:0;transition:opacity .1s;overflow:hidden}
+.premium-cursor-layer.is-visible{opacity:1}
+.premium-cursor-dot{position:fixed;left:0;top:0;width:5px;height:5px;translate:-50% -50%;pointer-events:none;will-change:transform}
+.magnetic-dot-core{display:block;width:5px;height:5px;border:0;border-radius:50%;background:var(--blue,#ff8a00);box-shadow:0 0 4px color-mix(in srgb,var(--blue,#ff8a00) 30%,transparent);transform:scale(1);transition:transform .24s cubic-bezier(.22,1,.36,1),box-shadow .24s,opacity .24s}
+.premium-cursor-layer[data-state=interactive] .magnetic-dot-core{transform:scale(1.6);box-shadow:0 0 6px color-mix(in srgb,var(--blue,#ff8a00) 45%,transparent);opacity:.9}
+@media(hover:hover) and (pointer:fine) and (min-width:1025px) and (prefers-reduced-motion:no-preference){html.premium-cursor-enabled,html.premium-cursor-enabled *{cursor:none!important}html.premium-cursor-enabled :is(input,textarea,[contenteditable=true]){cursor:text!important}html.premium-cursor-enabled :is(select,iframe,object,embed,dialog,dialog *){cursor:auto!important}
+html.premium-cursor-enabled #projets.orbit-projects .work-slide{transition:translate .3s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
+html.premium-cursor-enabled #projets.orbit-projects .work-slide.magnetic-dot-card-hover{translate:-50% calc(-50% - 3px)!important;border-color:#ff8a0070;box-shadow:0 17px 36px #0005,0 0 13px #ff8a0012}}
+@media(max-width:1024px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.premium-cursor-layer{display:none!important}}

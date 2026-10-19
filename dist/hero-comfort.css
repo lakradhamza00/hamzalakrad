@@ -1,0 +1,22 @@
+/* Hero-only optical zoom; all original materials and content retained. */
+#accueil.hero-comfort:after{display:none}
+#accueil .hero-pointer-light{position:absolute;left:-150px;top:-150px;width:300px;height:300px;pointer-events:none;z-index:0;background:radial-gradient(circle,#ff9d0008,transparent 70%);opacity:0;transition:opacity .4s;will-change:transform}
+#accueil .hero-pointer-light.is-active{opacity:1}
+#accueil .orbit-universe .orbit-capsule{backdrop-filter:none}
+#accueil .orbit-universe .path-three,#accueil .orbit-universe .path-five{display:none}
+#accueil .orbit-universe .orbit-path:before{display:none}
+#accueil .orbit-universe .universe-halo{filter:none}
+#accueil .hero-title .outline-name:before{filter:blur(10px)!important;opacity:.72}
+#accueil .hero-title .name-word:hover{scale:1.05 1}
+#accueil .hero-title .outline-name:hover{scale:1.10 1}
+@media(min-width:701px){
+ #accueil .rabat-hero-content{scale:.88;transform-origin:left center}
+ #accueil .orbit-universe{scale:.85;transform-origin:65% 50%}
+}
+@media(min-width:1101px){
+ #accueil.rabat-hero{min-height:740px;padding-top:125px;padding-bottom:70px}
+ #accueil .orbit-universe{right:-1%;top:51%}
+ #accueil .rabat-hero-content{transform:translateY(0)}
+}
+@media(max-width:700px){#accueil .hero-pointer-light{display:none}#accueil .orbit-universe{scale:.9;transform-origin:center center}#accueil .name-line{font-size:19vw}}
+@media(prefers-reduced-motion:reduce){#accueil .hero-pointer-light{display:none}#accueil .orbit-universe{will-change:auto}}

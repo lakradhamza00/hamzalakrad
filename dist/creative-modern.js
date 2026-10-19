@@ -1,0 +1,9 @@
+/* Per-object lighting and depth; no permanent JavaScript animation loop. */
+(()=>{
+ const scene=document.querySelector('.technology-ecosystem'),reduce=matchMedia('(prefers-reduced-motion:reduce)'),fine=matchMedia('(hover:hover) and (pointer:fine)');
+ const cards=[...scene.querySelectorAll('.eco-card')];let frame=0,event=null;
+ function paint(){frame=0;if(!event||reduce.matches||!fine.matches)return;const r=scene.getBoundingClientRect(),x=(event.clientX-r.left)/r.width-.5,y=(event.clientY-r.top)/r.height-.5;scene.style.setProperty('--scene-x',`${event.clientX-r.left}px`);scene.style.setProperty('--scene-y',`${event.clientY-r.top}px`);cards.forEach((card,i)=>{const d=1+i%3,b=card.getBoundingClientRect(),near=Math.max(0,1-Math.hypot(event.clientX-b.x-b.width/2,event.clientY-b.y-b.height/2)/230);card.style.setProperty('--card-x',`${x*d*5}px`);card.style.setProperty('--card-y',`${y*d*4}px`);card.style.setProperty('--tilt-x',`${-y*near*9}deg`);card.style.setProperty('--tilt-y',`${x*near*12}deg`);card.style.setProperty('--light-x',`${event.clientX-b.left}px`);card.style.setProperty('--light-y',`${event.clientY-b.top}px`)})}
+ scene.addEventListener('pointermove',e=>{event=e;if(!frame)frame=requestAnimationFrame(paint)},{passive:true});scene.addEventListener('pointerleave',()=>{event=null;cards.forEach(c=>['--card-x','--card-y','--tilt-x','--tilt-y'].forEach(k=>c.style.removeProperty(k)))});
+ cards.forEach(card=>card.addEventListener('click',()=>{const name=card.dataset.technology,target=[...document.querySelectorAll('.rabat-skills .tech')].find(t=>t.querySelector('strong').textContent.split(' / ')[0]===name);if(target){target.scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'center'});target.focus({preventScroll:true});target.click()}}));
+ document.querySelectorAll('.rabat-skill-card').forEach((el,i)=>el.style.transitionDelay=`${i%3*35}ms`);
+})();

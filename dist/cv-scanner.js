@@ -1,0 +1,2 @@
+/* Pause decorative CSS scanning when hidden; viewer/download behavior unchanged. */
+(()=>{const preview=document.querySelector('#cv .cv-scanner');if(!preview)return;let visible=false;const update=()=>preview.classList.toggle('cv-scanner-running',visible&&!document.hidden);new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;update()},{threshold:0}).observe(preview);document.addEventListener('visibilitychange',update)})();

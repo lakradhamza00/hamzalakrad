@@ -1,0 +1,18 @@
+/* Full-height Projects environment. Existing cards and orbit remain intact. */
+#projets.orbit-projects{background:linear-gradient(155deg,#03070b,#071019 58%,#03070b)}
+#projets.orbit-projects:before,#projets.orbit-projects .orbit-project-stage:before,#projets.orbit-projects .project-orbit-lines{display:none}
+#projets .fluid-environment{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;contain:paint;opacity:.92}
+#projets .fluid-depth{position:absolute;inset:-5% -3%;transform:translate3d(var(--fluid-x,0px),var(--fluid-y,0px),0);will-change:transform;transition:transform .55s cubic-bezier(.22,1,.36,1)}
+#projets .fluid-wave{position:absolute;width:100%;height:100%;inset:0;overflow:visible;animation:project-fabric-drift 26s ease-in-out infinite alternate;animation-play-state:paused;transform-origin:65% 40%}
+#projets .fluid-wave.wave-secondary{animation-name:project-fabric-counter;animation-duration:30s;transform-origin:20% 70%;opacity:.7}
+#projets.fluid-running .fluid-wave,#projets.fluid-running .fabric-spark{animation-play-state:running}
+#projets .fluid-environment:after{content:'';position:absolute;inset:0;background:linear-gradient(#03070b00,#03070b22 23%,#03070b77 50%,#03070b11 82%,#03070b),radial-gradient(ellipse at 43% 47%,#03070b88,transparent 65%);pointer-events:none}
+#projets .fabric-spark{fill:#ffaf62;opacity:0;animation:fabric-spark 18s ease-in-out infinite;animation-play-state:paused;offset-rotate:0deg}
+#projets .fabric-spark.spark-two{animation-delay:-11s;animation-duration:25s}
+#projets .work-slide{transition:translate .35s cubic-bezier(.22,1,.36,1),scale .35s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s}
+html #projets.orbit-projects .work-slide:hover,html.premium-cursor-enabled #projets.orbit-projects .work-slide.magnetic-dot-card-hover{translate:-50% calc(-50% - 6px)!important;scale:1.015;border-color:#ff8a0070;box-shadow:0 17px 36px #0005,0 0 14px #ff8a0015}
+@keyframes project-fabric-drift{from{transform:translate3d(-1.2%,0,0) rotate(-1deg) scale(1.02)}to{transform:translate3d(1.4%,2%,0) rotate(1deg) scale(1.055)}}
+@keyframes project-fabric-counter{from{transform:translate3d(1%,1%,0) rotate(.8deg) scale(1.025)}to{transform:translate3d(-1.5%,-1%,0) rotate(-.8deg) scale(1.05)}}
+@keyframes fabric-spark{0%,25%{offset-distance:0%;opacity:0}30%{opacity:.65}65%{opacity:.4}75%,100%{offset-distance:100%;opacity:0}}
+@media(max-width:700px){#projets .fluid-environment{opacity:.65}#projets .fluid-depth{inset:0;transform:none!important;will-change:auto}#projets .fluid-wave{animation-duration:30s}#projets .wave-secondary,#projets .fabric-spark{display:none}html #projets.orbit-projects .work-slide:hover{translate:-50% -50%!important;scale:1}}
+@media(prefers-reduced-motion:reduce){#projets .fluid-wave,#projets .fabric-spark{animation:none}#projets .fluid-depth{transform:none!important;will-change:auto}html #projets.orbit-projects .work-slide:hover,html.premium-cursor-enabled #projets.orbit-projects .work-slide.magnetic-dot-card-hover{translate:-50% -50%!important;scale:1}#projets .work-slide{transition:none}}

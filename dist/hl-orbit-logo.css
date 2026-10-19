@@ -1,0 +1,23 @@
+/* Navigation signature only; all other logos remain unchanged. */
+.header .hl-orbit-logo{position:relative;display:flex;align-items:center;justify-content:center;width:.8042763158em;height:1em;flex:0 0 .8042763158em;line-height:1;letter-spacing:0;padding:0;margin:0;overflow:visible}
+.header .hl-orbit-emblem{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;width:68px;height:68px;overflow:visible;transition:scale .3s ease;pointer-events:none}
+.header .hl-orbit-track{transform-origin:40px 40px;animation:hl-orbit-turn 12s linear infinite}
+.header .hl-orbit-track ellipse{fill:none;stroke:#ff9d00;stroke-width:.65;stroke-opacity:.55}
+.header .hl-orbit-two{animation-name:hl-orbit-turn-two;animation-duration:18s}
+.header .hl-orbit-two ellipse{stroke-opacity:.3;stroke-width:.6}
+.header .hl-orbit-three{animation-name:hl-orbit-turn-three;animation-duration:24s}
+.header .hl-orbit-three ellipse{stroke:#e4b785;stroke-opacity:.2;stroke-width:.55}
+.header .hl-particle{fill:#ffb020;opacity:.85;transition:opacity .3s}
+.header .hl-orbit-one .hl-particle{fill:#ffc14b;opacity:1}
+.header .hl-particle-halo{fill:url(#hl-particle);opacity:.6;transition:opacity .3s}
+.header .hl-monogram{transition:filter .3s;filter:drop-shadow(0 0 2px #ff9d0012)}
+.header .hl-orbit-logo:is(:hover,:focus-visible) .hl-orbit-emblem{scale:1.05}
+.header .hl-orbit-logo:is(:hover,:focus-visible) .hl-monogram{filter:drop-shadow(0 0 3px #ff9d004d)}
+.header .hl-orbit-logo:is(:hover,:focus-visible) .hl-particle,.header .hl-orbit-logo:is(:hover,:focus-visible) .hl-particle-halo{opacity:1}
+.header .hl-orbit-logo:focus-visible{outline:1px solid #ff9d0080;outline-offset:2px;border-radius:10px}
+@keyframes hl-orbit-turn{from{transform:rotate(18deg)}to{transform:rotate(378deg)}}
+@keyframes hl-orbit-turn-two{from{transform:rotate(78deg)}to{transform:rotate(-282deg)}}
+@keyframes hl-orbit-turn-three{from{transform:rotate(-40deg)}to{transform:rotate(320deg)}}
+@media(max-width:1100px){.header .hl-orbit-emblem{width:58px;height:58px}}
+@media(max-width:700px){.header .hl-orbit-emblem{width:50px;height:50px}}
+@media(prefers-reduced-motion:reduce){.header .hl-orbit-track{animation:none}.header .hl-orbit-one{transform:rotate(18deg)}.header .hl-orbit-two{transform:rotate(78deg)}.header .hl-orbit-three{transform:rotate(-40deg)}.header .hl-orbit-emblem,.header .hl-monogram,.header .hl-particle,.header .hl-particle-halo{transition:none}.header .hl-orbit-logo:is(:hover,:focus-visible) .hl-orbit-emblem{scale:1}}
