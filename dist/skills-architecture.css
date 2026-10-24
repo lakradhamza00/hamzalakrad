@@ -1,0 +1,17 @@
+/* Decorative architecture only; no layout contribution. */
+#competences .skills-architecture{position:absolute;top:80px;right:max(64px,calc((100% - 1192px)/2));width:min(43%,500px);height:88px;z-index:-1;color:var(--blue);pointer-events:none;contain:layout paint}
+#competences .skills-architecture svg{display:block;width:100%;height:100%;overflow:visible}
+#competences .architecture-route{fill:none;stroke:currentColor;stroke-width:.65;opacity:.16}
+#competences .architecture-node{fill:none;stroke:currentColor;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;opacity:.26;animation:architecture-node-light 8s linear infinite;animation-delay:var(--node-delay);animation-play-state:paused}
+#competences .architecture-label{fill:currentColor;stroke:none;font:7px monospace;letter-spacing:1px;text-anchor:middle;opacity:.65}
+#competences .architecture-context{fill:currentColor;stroke:none;font:5px monospace;letter-spacing:1.5px;opacity:.18}
+#competences .architecture-detail{fill:none;stroke:currentColor;stroke-width:.6;opacity:.09}
+#competences .architecture-pulse{fill:currentColor;opacity:0;animation:architecture-data-flow 8s linear infinite;animation-play-state:paused;will-change:transform,opacity}
+#competences.architecture-running .architecture-node,#competences.architecture-running .architecture-pulse{animation-play-state:running}
+@keyframes architecture-data-flow{0%{transform:translate3d(38px,32px,0);opacity:0}3%{opacity:.75}82%{transform:translate3d(462px,32px,0);opacity:.75}87%,100%{transform:translate3d(462px,32px,0);opacity:0}}
+@keyframes architecture-node-light{0%,12%{opacity:.26}3%,7%{opacity:.7}16%,100%{opacity:.26}}
+#competences .rabat-skills .stream-tech:hover{border-color:color-mix(in srgb,var(--blue) 38%,transparent)}
+@media(max-width:1100px) and (min-width:701px){#competences .skills-architecture{top:35px;right:40px;width:46%;height:75px}}
+@media(max-width:700px){#competences .skills-architecture{top:15px;right:24px;width:190px;height:57px}#competences .architecture-desktop{display:none}#competences .architecture-mobile{display:block}#competences .architecture-node{animation:none;opacity:.24}#competences .architecture-pulse{animation:none;display:none}}
+@media(min-width:701px){#competences .architecture-mobile{display:none}}
+@media(prefers-reduced-motion:reduce){#competences .architecture-node{animation:none;opacity:.26}#competences .architecture-pulse{animation:none;display:none}}

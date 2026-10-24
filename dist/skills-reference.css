@@ -1,0 +1,63 @@
+/* Reference composition, confined to the existing Skills section. */
+#competences.stack-section{background:#03090f;padding-block:40px 42px;overflow:hidden}
+#competences:before{opacity:.2}
+#competences>.wrap{position:relative}
+#competences>.wrap>.section-top,#competences .section-heading>.copy,#competences .stack-tabs{display:none!important}
+#competences .section-heading{display:block;min-height:83px;margin:0;padding:0;width:41%}
+#competences .section-heading h2{font:400 clamp(25px,2.8vw,40px)/1.2 'DM Sans',sans-serif;letter-spacing:-1.2px;color:#f6f6f6;white-space:nowrap;margin:0}
+#competences .section-heading h2:after{content:'';display:block;width:42px;height:3px;margin-top:13px;background:var(--blue);border-radius:2px;box-shadow:0 0 5px #ff8a0033}
+#competences .architecture-accent{color:var(--blue)}
+#competences .skills-architecture{top:40px;right:max(64px,calc((100% - 1192px)/2));width:min(55%,660px);height:84px;z-index:0;overflow:visible}
+#competences .architecture-route{opacity:.6;stroke-width:.9}
+#competences .architecture-node{opacity:.72;stroke-width:1.2;filter:drop-shadow(0 0 2px #ff8a0033)}
+#competences .architecture-label{font:8px 'DM Sans',sans-serif;letter-spacing:0;opacity:1;fill:#e9e9e9}
+#competences .architecture-context,#competences .architecture-detail{display:none}
+@keyframes architecture-node-light{0%,12%{opacity:.72}3%,7%{opacity:1}16%,100%{opacity:.72}}
+#competences .tech-stream-band{border:0;padding:11px 0 12px}
+#competences .tech-stream-heading{gap:23px;padding:0 0 5px;align-items:flex-start}
+#competences .stream-number{font:600 12px/1.3 'DM Sans',sans-serif;color:var(--blue);margin-top:2px}
+#competences .tech-stream-heading h3{font:600 21px/1.1 'DM Sans',sans-serif;letter-spacing:-.4px}
+#competences .tech-stream-heading p{font:400 10px/1.4 'DM Sans',sans-serif;color:#a2acb9;margin:4px 0 0}
+#competences .stream-flow{align-self:flex-end;color:var(--blue);gap:10px;font-size:18px}
+#competences .stream-flow i{width:2px;height:2px;background:var(--blue);box-shadow:none}
+#competences .tech-stream-viewport{padding:5px 0 13px;margin-left:46px;width:calc(100% - 46px);mask-image:linear-gradient(90deg,transparent,#000 1%,#000 98%,transparent)}
+#competences .tech-stream-group{gap:14px;padding-right:14px}
+#competences .rabat-skills .tech.stream-tech{flex:0 0 188px;width:188px;min-width:188px;min-height:73px;height:73px;padding:14px 18px;gap:13px;border:1px solid #ffffff0b;border-radius:13px;background:linear-gradient(135deg,#0b141e,#060d15);backdrop-filter:none;box-shadow:inset 0 1px #ffffff03}
+#competences .rabat-skills .stream-logo,#competences .stream-logo>img,#competences .stream-logo>svg{width:36px;height:36px;min-width:36px}
+#competences .stream-logo>img:nth-child(2){width:19px;height:19px;min-width:0}
+#competences .stream-tech-copy{gap:4px}
+#competences .rabat-skills .stream-tech strong{font-size:13px;line-height:1.25}
+#competences .rabat-skills .stream-tech small{font-size:9px;line-height:1.3;letter-spacing:0;color:#a4aebb}
+#competences .rabat-skills .stream-tech:hover,#competences .rabat-skills .stream-tech:focus-visible{translate:0 -2px;scale:1.01;border-color:#ff8a0040;box-shadow:inset 0 1px #ffffff08}
+#competences .stack-detail{font-size:10px;margin:8px 0 0 46px}
+@media(min-width:1500px){#competences .section-heading h2{font-size:42px}}
+@media(max-width:1100px) and (min-width:701px){#competences .skills-architecture{top:40px;right:40px;width:51%;height:75px}#competences .section-heading h2{font-size:29px}#competences .section-heading{min-height:78px}}
+@media(max-width:700px){#competences.stack-section{padding-block:25px 30px}#competences .section-heading{width:100%;min-height:112px}#competences .section-heading h2{font-size:28px;letter-spacing:-1px}#competences .section-heading h2:after{width:28px;height:2px;margin-top:8px}#competences .skills-architecture{top:79px;left:24px;right:24px;width:calc(100% - 48px);height:55px}#competences .architecture-desktop{display:block}#competences .architecture-mobile{display:none}#competences .architecture-node{opacity:.72}#competences .tech-stream-heading{gap:15px}#competences .tech-stream-heading h3{font-size:17px}#competences .stream-number{font-size:10px}#competences .tech-stream-heading p{font-size:9px}#competences .tech-stream-viewport{margin-left:30px;width:calc(100% - 30px)}#competences .rabat-skills .tech.stream-tech{flex-basis:156px;width:156px;min-width:156px;min-height:63px;height:63px;padding:12px;gap:10px}#competences .rabat-skills .stream-logo,#competences .stream-logo>img,#competences .stream-logo>svg{width:30px;min-width:30px;height:30px}#competences .stream-logo>img:nth-child(2){min-width:0;width:17px;height:17px}#competences .rabat-skills .stream-tech strong{font-size:12px}#competences .rabat-skills .stream-tech small{font-size:8px}#competences .stack-detail{margin-left:30px}}
+@media(prefers-reduced-motion:reduce){#competences .architecture-node{opacity:.72;animation:none}}
+
+/* Match the supplied icon strip: crisp copper outlines and a restrained warm halo. */
+#competences .skills-architecture{width:390px;max-width:55%;height:78px;top:30px}
+#competences .architecture-node{stroke-width:1.35;opacity:.86;filter:drop-shadow(0 0 1px #ff8a0080) drop-shadow(0 0 4px #ff8a003b)}
+#competences .architecture-route{stroke-width:1;opacity:.85;filter:drop-shadow(0 0 2px #ff8a0040)}
+#competences .architecture-label{font:8px 'DM Sans',sans-serif;fill:#eee;opacity:1;letter-spacing:0}
+@keyframes architecture-node-light{0%,12%{opacity:.86}3%,7%{opacity:1}16%,100%{opacity:.86}}
+@keyframes architecture-data-flow{0%{transform:translate3d(26px,32px,0);opacity:0}3%{opacity:.85}82%{transform:translate3d(347px,32px,0);opacity:.85}87%,100%{transform:translate3d(347px,32px,0);opacity:0}}
+@media(max-width:1100px) and (min-width:701px){#competences .skills-architecture{top:30px;width:390px;max-width:51%;height:78px}}
+@media(max-width:700px){#competences .skills-architecture{top:75px;max-width:none;width:calc(100% - 48px);height:65px}#competences .architecture-node{filter:drop-shadow(0 0 2px #ff8a0040)}}
+@media(prefers-reduced-motion:reduce){#competences .architecture-node{opacity:.86}}
+
+/* The passing data point activates a brighter, identical outline — no size change. */
+#competences .architecture-flash{fill:none;stroke:#ffc477;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:0;filter:drop-shadow(0 0 2px #ff9d2eaa) drop-shadow(0 0 5px #ff8a0066);pointer-events:none}
+#competences .architecture-flash .architecture-label{fill:#fff0d9}
+@media(max-width:700px){#competences .architecture-desktop .architecture-pulse{display:block}#competences .architecture-flash{filter:drop-shadow(0 0 2px #ff9d2e88)}}
+@media(prefers-reduced-motion:reduce){#competences .architecture-flash{display:none}#competences .architecture-desktop .architecture-pulse{display:none}}
+
+/* Restore the reference's right-hand position; only refine the static light. */
+#competences .skills-architecture{left:auto;right:24px;top:30px;width:430px;max-width:45%;height:86px;z-index:0;contain:layout paint}
+#competences .skills-architecture svg.architecture-mobile{display:none!important}
+#competences .architecture-node{opacity:.95;stroke-width:1.3;filter:drop-shadow(0 0 1px #ffb96b8c) drop-shadow(0 0 4px #ff8a0055)}
+#competences .architecture-route{opacity:.8;filter:drop-shadow(0 0 1.5px #ff8a0044)}
+#competences .architecture-label{fill:#f0e7d9;font:500 8px 'DM Sans',sans-serif;opacity:.95}
+@media(max-width:1100px) and (min-width:701px){#competences .skills-architecture{left:auto;right:24px;top:30px;width:390px;max-width:48%;height:78px}}
+@media(max-width:700px){#competences .skills-architecture{left:24px;right:24px;top:75px;width:calc(100% - 48px);max-width:none;height:65px}#competences .architecture-node{filter:drop-shadow(0 0 2px #ff8a0066)}}
+@media(prefers-reduced-motion:reduce){#competences .architecture-node{opacity:.95}}
