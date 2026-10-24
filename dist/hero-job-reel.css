@@ -1,0 +1,11 @@
+/* Compact reel; preserve the existing outer slot so adjacent content does not move. */
+#accueil .hero-position h1>.job-reel{position:relative;display:inline-block;width:fit-content;min-width:220px;max-width:min(290px,100%);height:76px;padding:0 18px;vertical-align:middle;white-space:nowrap;font:600 18px/1.3 'DM Sans',sans-serif;letter-spacing:-.25px;color:#fff}
+#accueil .job-reel-sizer{visibility:hidden;pointer-events:none;display:inline-block}
+#accueil .job-reel-frame{position:absolute;left:0;top:50%;translate:0 -50%;width:100%;height:52px;background:rgba(5,8,12,.08);border:1px solid rgba(255,120,0,.30);border-radius:10px;box-shadow:0 0 5px #ff8a0006;transition:border-color .2s;isolation:isolate}
+#accueil .job-reel-frame:hover{border-color:rgba(255,120,0,.48)}
+#accueil .job-reel-stop{position:absolute;inset:-1px;border:1px solid #ff9d2e;border-radius:inherit;opacity:0;pointer-events:none}
+#accueil .job-reel-window{position:absolute;inset:0 17px;overflow:hidden;mask-image:linear-gradient(transparent,#000 23%,#000 77%,transparent)}
+#accueil .job-reel-row{position:absolute;top:50%;left:0;width:100%;height:26px;margin-top:-13px;text-align:center;font:inherit;line-height:26px;color:#b9bfc7!important;background:none!important;-webkit-text-fill-color:currentColor;text-shadow:none;transform-origin:center;will-change:transform,opacity;pointer-events:none}
+#accueil .job-reel-ink{position:absolute;inset:0;text-align:center;font:inherit;line-height:inherit;color:transparent!important;-webkit-text-fill-color:transparent;background-image:var(--reel-metal-image);background-size:var(--reel-metal-size);background-clip:text;-webkit-background-clip:text;pointer-events:none}
+@media(max-width:700px){#accueil .hero-position h1>.job-reel{min-width:205px;max-width:min(260px,100%);height:70px;padding:0 16px;font-size:16px}#accueil .job-reel-frame{height:46px;box-shadow:none}#accueil .job-reel-window{inset-inline:15px}}
+@media(prefers-reduced-motion:reduce){#accueil .job-reel-frame{transition:none}#accueil .job-reel-row{will-change:opacity}#accueil .job-reel-stop{display:none}}

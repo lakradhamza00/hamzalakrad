@@ -1,11 +1,15 @@
-/* Tiny magnetic dot only: no ring, labels, ripple or particles. */
+/* Minimal Arrow: outlined optical tip, no persistent ring or trail. */
 html[data-premium-cursor] .cursor-follower{display:none!important}
 .premium-cursor-layer{position:fixed;inset:0;z-index:2147483000;pointer-events:none!important;opacity:0;transition:opacity .1s;overflow:hidden}
 .premium-cursor-layer.is-visible{opacity:1}
-.premium-cursor-dot{position:fixed;left:0;top:0;width:5px;height:5px;translate:-50% -50%;pointer-events:none;will-change:transform}
-.magnetic-dot-core{display:block;width:5px;height:5px;border:0;border-radius:50%;background:var(--blue,#ff8a00);box-shadow:0 0 4px color-mix(in srgb,var(--blue,#ff8a00) 30%,transparent);transform:scale(1);transition:transform .24s cubic-bezier(.22,1,.36,1),box-shadow .24s,opacity .24s}
-.premium-cursor-layer[data-state=interactive] .magnetic-dot-core{transform:scale(1.6);box-shadow:0 0 6px color-mix(in srgb,var(--blue,#ff8a00) 45%,transparent);opacity:.9}
-@media(hover:hover) and (pointer:fine) and (min-width:1025px) and (prefers-reduced-motion:no-preference){html.premium-cursor-enabled,html.premium-cursor-enabled *{cursor:none!important}html.premium-cursor-enabled :is(input,textarea,[contenteditable=true]){cursor:text!important}html.premium-cursor-enabled :is(select,iframe,object,embed,dialog,dialog *){cursor:auto!important}
+/* The visible tip is the hotspot; the SVG remains sharp at every scale. */
+.premium-cursor-dot{position:fixed;left:0;top:0;width:26px;height:26px;translate:-2.8px -2.3px;pointer-events:none;will-change:transform}
+.minimal-arrow{display:block;overflow:visible;transform-origin:3px 2.5px;transform:scale(1);filter:drop-shadow(0 0 1.2px #ff8a0045);transition:transform .22s cubic-bezier(.22,1,.36,1),filter .22s}
+.arrow-outline{transition:stroke .22s}
+.premium-cursor-layer[data-state=interactive] .minimal-arrow{transform:scale(1.22);filter:drop-shadow(0 0 2px #ff8a0065)}
+.premium-cursor-layer[data-state=interactive] .arrow-outline{stroke:#ffaf51}
+.minimal-arrow-pulse{position:fixed;left:0;top:0;width:24px;height:24px;border:1px solid #ff9d2e;border-radius:50%;opacity:0;pointer-events:none;transform-origin:center}
+@media(hover:hover) and (pointer:fine) and (min-width:1025px) and (prefers-reduced-motion:no-preference){html.premium-cursor-enabled,html.premium-cursor-enabled *{cursor:none!important}html.premium-cursor-enabled :is(iframe,object,embed){cursor:auto!important}
 html.premium-cursor-enabled #projets.orbit-projects .work-slide{transition:translate .3s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
 html.premium-cursor-enabled #projets.orbit-projects .work-slide.magnetic-dot-card-hover{translate:-50% calc(-50% - 3px)!important;border-color:#ff8a0070;box-shadow:0 17px 36px #0005,0 0 13px #ff8a0012}}
 @media(max-width:1024px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.premium-cursor-layer{display:none!important}}
